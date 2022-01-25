@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Element</title>
+</head>
+<body>
+    <script>
+        const arr = [1,5,6,7,2,1];
+        const k = prompt("Enter Searched Element:");
+        SearchElement(arr,k);
+
+        function SearchElement(arr, k ){
+            var flag = 0;
+            for(var i = 0;i<arr.length;i++)
+            {
+                if(arr[i]==k)
+                {
+                    document.write("Element ", arr[i], "  is found <br>" );
+                    flag= -1;
+                    break;
+                }
+
+            }
+            if(flag ==0)
+            {
+                document.write("Element is Not found <br>" );
+            }
+        }
+    </script>
+</body>
+</html>
