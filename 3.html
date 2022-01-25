@@ -11,16 +11,26 @@
 <body>
     <div class="wrapper">
         <div class="heading">
-            <h1>Sum of N Numbers</h1>
+            <h1 id ="title">Sum of N Numbers</h1>
         </div>
         <div class="form">
             <div class="input-number">
-                <input type="number" placeholder="Enter any number" class="input">
+                <input type="number" placeholder="Enter any number"  name= "num" class="input">
             </div>
-        </div>
         <div class="btnn">
-            <input type="submit" value="Click Me" class="btn">
+            <input type="submit" value="Click Me" class="btn" onclick="MyFunction()">
         </div>
     </div>
+    <script>
+        function MyFunction(){
+            var num = document.getElementsByName("num")[0].value;
+            var sum= 0;
+            for(var i=0;i<num;i++)
+            {
+                sum = sum + i; 
+            }
+            alert(sum);
+        }
+    </script>
 </body>
 </html>
