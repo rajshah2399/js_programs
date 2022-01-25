@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Element In List</title>
+</head>
+<body>
+    <script>
+        const arr = [1,3,2,5,6];
+        // document.write("Largest Element Is => ", Math.max.apply(null, arr), "<br> <br>");
+
+        // Here we get NaN because max and min methods look at the data that passed passed in and say this is not a number this is an array since it is not a number 
+        // max min methods cant do anything. 
+        // document.write("Largest Element Is => ", Math.max(arr), "<br> <br>");
+
+        // to solve above problem Spread(...) Operator is used. which convert array to a list of values.  
+        const arr2 = arr.sort();
+        document.write("Largest Element Is => ",Math.max(...(arr2)));
+
+    </script>
+</body>
+</html>
