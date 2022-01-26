@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Alphanumeric value</title>
+</head>
+<body>
+    <script>
+        const str = prompt("Enter Alphanumeric value");
+        AlphaNumeric(str);
+
+        function AlphaNumeric(str)
+        {
+            var pattern = /^[A-Za-z0-9]+$/; 
+
+            var result = pattern.test(str);
+            if(result ==true )
+            {
+                document.write("String is AlphaNumeric");
+            }
+            else{
+                document.write("String is not an AlphaNumeric");
+
+            }
+        }
+    </script>
+</body>
+</html>
