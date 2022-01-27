@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Prime Numbers</title>
+</head>
+<body>
+    <script>
+
+        function PrimeNumber(val)
+        {
+            for(var i=2; i < val; i++)
+            {
+                if(val % i === 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+        function SumOfPrimes(num)
+        {
+            const list = []
+            const list1 = []
+
+            for(var i=2; i <= num; i++)
+            {   
+
+                if(PrimeNumber(i))
+                {
+                    list.push(i)
+                }
+            }
+            for(var j=0;j<list.length-1;j++)
+            {
+                list1.push(list[j+1]- list[j])
+            }
+            return list1
+    }
+    const results = SumOfPrimes(100);
+    document.write("Diffrence between two numbers are => ", results)
+    </script>
+</body>
+</html>
