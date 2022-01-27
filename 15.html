@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Return List</title>
+    <title>Alternate Elemenets</title>
 </head>
 <body>
     <script>
-        const num = prompt("Enter any Number")
-        ReturnList(num)
+        const arr1 = [1,2,3]
+        const arr2 = ['a','b','c']
+        AlternateElement(arr1,arr2);
 
-        function ReturnList(num){
-            document.write([num.split('')])
+        function AlternateElement(arr1,arr2)
+        {
+            var arr3 = []
+            for (var i=0;i<arr1.length;++i) 
+            {
+                arr3.push(arr1[i]);
+                arr3.push(arr2[i]);
+            }
+            document.write(arr3);
         }
     </script>
 </body>
